@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>GENI API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -222,31 +222,113 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#purpose-of-geni" class="toc-h2 toc-link" data-title="purpose-of-geni">Purpose of GENI</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#general" class="toc-h2 toc-link" data-title="general">General</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#json-object-transfer" class="toc-h2 toc-link" data-title="json-object-transfer">JSON Object Transfer</a>
+                  </li>
+                  <li>
+                    <a href="#specified-dto-types" class="toc-h2 toc-link" data-title="specified-dto-types">Specified DTO Types</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters" class="toc-h2 toc-link" data-title="url-parameters">URL Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#dates-and-times" class="toc-h2 toc-link" data-title="dates-and-times">Dates and Times</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#authentication-api" class="toc-h1 toc-link" data-title="authentication-api">Authentication API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#email-identity" class="toc-h2 toc-link" data-title="email-identity">Email Identity</a>
+                  </li>
+                  <li>
+                    <a href="#session-token" class="toc-h2 toc-link" data-title="session-token">Session = Token</a>
+                  </li>
+                  <li>
+                    <a href="#xss-csrf-protection" class="toc-h2 toc-link" data-title="xss-csrf-protection">XSS / CSRF Protection</a>
+                  </li>
+                  <li>
+                    <a href="#csrf-token-issue-and-reissue" class="toc-h2 toc-link" data-title="csrf-token-issue-and-reissue">CSRF Token Issue and Reissue</a>
+                  </li>
+                  <li>
+                    <a href="#registration-procedure" class="toc-h2 toc-link" data-title="registration-procedure">Registration Procedure</a>
+                  </li>
+                  <li>
+                    <a href="#recovery-procedures" class="toc-h2 toc-link" data-title="recovery-procedures">Recovery Procedures</a>
+                  </li>
+                  <li>
+                    <a href="#security-considerations" class="toc-h2 toc-link" data-title="security-considerations">Security Considerations</a>
+                  </li>
+                  <li>
+                    <a href="#get-login" class="toc-h2 toc-link" data-title="get-login">Get Login</a>
+                  </li>
+                  <li>
+                    <a href="#post-login" class="toc-h2 toc-link" data-title="post-login">Post Login</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-roles" class="toc-h2 toc-link" data-title="get-all-roles">Get All Roles</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-role" class="toc-h2 toc-link" data-title="get-a-specific-role">Get a Specific Role</a>
+                  </li>
+                  <li>
+                    <a href="#get-members-in-a-role" class="toc-h2 toc-link" data-title="get-members-in-a-role">Get Members in a Role</a>
+                  </li>
+                  <li>
+                    <a href="#add-a-member-to-a-role" class="toc-h2 toc-link" data-title="add-a-member-to-a-role">Add a Member to a Role</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-member-from-a-role" class="toc-h2 toc-link" data-title="delete-a-member-from-a-role">Delete a Member from a Role</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#zone-http-api" class="toc-h1 toc-link" data-title="zone-http-api">Zone HTTP API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#api-prefix" class="toc-h2 toc-link" data-title="api-prefix">API Prefix</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#site-management" class="toc-h1 toc-link" data-title="site-management">Site Management</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-sites" class="toc-h2 toc-link" data-title="get-all-sites">Get All Sites</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-site" class="toc-h2 toc-link" data-title="get-a-specific-site">Get a Specific Site</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#http-errors" class="toc-h1 toc-link" data-title="http-errors">HTTP Errors</a>
+          </li>
+          <li>
+            <a href="#metric-description" class="toc-h1 toc-link" data-title="metric-description">Metric Description</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request" class="toc-h2 toc-link" data-title="http-request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters" class="toc-h2 toc-link" data-title="url-parameters">URL Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#authorization" class="toc-h2 toc-link" data-title="authorization">Authorization</a>
+                  </li>
+              </ul>
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -254,134 +336,317 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to Geli&#39;s GENI web-based API! </p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
+<p>This document describes Geli’s web-based APIs in GENI. It is primarily written for Geli developers, QA, technical managers, and portions for future API consumers (partners, utilities, etc).</p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+GENI Zone also communicates with EOS nodes by sending compressed messages via STOMP over Websockets. That protocol and supported messages is not covered in this document.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='purpose-of-geni'>Purpose of GENI</h2>
+<p>“Let me explain … No, there is too much. Let me sum up.” —Inigo Montoya</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>GENI has these goals: </p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<ul>
+<li>Register sites and nodes, and track the status of physical node hardware out in the field</li>
+<li>Configure each node with a device/port model, and some module (driver/app) configurations</li>
+<li>Collect lots of telemetry from nodes and store it</li>
+<li>Process telemetry in real time to detect change events</li>
+<li>Let users subscribe to notifications from these change events (alerts)</li>
+<li>Allow registering user accounts, giving them roles and permissions, and assigning to groups</li>
+<li>Let groups of users see status and historical telemetry for sites, or restrict to specific resources</li>
+<li>Interact with running applications and drivers on EOS nodes (review data, change mode)</li>
+<li>Aggregate and control energy assets together</li>
+</ul>
+<h2 id='general'>General</h2><h3 id='stateless'>Stateless</h3>
+<p>All of the information needed to process a request is part of the request. The server generally does not remember any state for the client. When possible, requests and actions are one-step</p>
+<h3 id='synchronous'>Synchronous</h3>
+<p>The client waits with an open TCP connection for their response, which is expected to arrive within several seconds. For example, updating a site record with an address correction can take a little while (dozens of ms) to complete because of the geocoding and database activity. The response will contain not only a successful status code, but also a modified, geocoded site with new latitude and longitude, so the client knows the record has been updated.</p>
+<h3 id='no-guarantee-without-explicit-confirmation'>No Guarantee Without Explicit Confirmation</h3>
+<p>Although the APIs are synchronous, this does not mean that a request has completely succeeded if the API request does not completely fail. </p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<p>Some requests return “success” after an action has been queued in another system, or even when a request was silently refused. In cases where the API does not provide an explicit confirming response — such as a modified object to “show” that the object was modified — the client should not assume that an action has occurred or completed.</p>
+<h3 id='shared-authentication'>Shared Authentication</h3>
+<p>After logging in, the user’s token is portable across servers / services that may be on different machines or even in different locations. As described in the Authorization API section, there is a session, but it is stored by the client.</p>
+<h2 id='json-object-transfer'>JSON Object Transfer</h2>
+<p>All requests and responses are transferred as JSON objects. UTF-8 encoding is preferred. All objects used as API inputs or outputs are serialized according to the following rules:</p>
+
+<ol>
+<li>A field “@dto” must be present, specifying the type of the object. When handling any response, the client must check that this is the expected type (see <a href="#error-handling">Error Handling</a>). </li>
+<li>Null fields should not be serialized.</li>
+<li>Unrecognized fields and any fields that do not apply to the request are silently ignored. </li>
+<li>The required fields are minimal. On an “update” (PUT) request, for example, the caller should only specify the fields that are being updated plus the required “@dto” field.</li>
+</ol>
+<h2 id='specified-dto-types'>Specified DTO Types</h2>
+<p>Data Transfer Objects (DTOs) with well-known types are used for all API inputs and outputs. All DTO types are defined in the package net.geli.dto. You can review that package to see all possible fields for a certain DTO or you may be able to rely on the examples of typical usage in this doc.</p>
+
+<p>All API inputs and results are wrapped in a well-known typed DTO. For example, if an API method returns a list of objects, it will be a ListDto object of other DTO objects, not a plain JSON list. </p>
+
+<p>DTOs may contain basic types including lists, maps, numbers, booleans, etc., and they may contain other typed DTOs. Object classes can also be used within a DTO that are not a DTO (do not contain a @dto field), but those objects cannot be an API input or output by themselves.</p>
+
+<p>Some DTO types are reused for more than one type of request / response, with optional fields that are only examined under certain conditions. </p>
+
+<blockquote>
+<p>Example Resource DTOs  </p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET 
+  <span class="s2">"https://geni1.geli.net/api/v1/sites/example"</span>
+  -H <span class="s1">'Authorization: Token token="GENITOKEN"
+</span></code></pre>
+<blockquote>
+<p>The above command returns JSON structure like this: </p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Site"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"siteCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-site-47155"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Site Name #47155"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"streetAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Fake St."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"unitDesignation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Suite #9"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Francisco"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"stateOrProvinceCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94105"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"countryCodeA2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"manualGeolocation"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timeZone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/Los_Angeles"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"manualTimeZone"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"siteHost"</span><span class="p">:</span><span class="w"> </span><span class="s2">"site-owner-example@geli.net"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Collection resource endpoints (e.g. /sites ) provide an example DTO demonstrating what fields should be present when using POST to create a new resource or other request. These are available with the virtual resource code “example”. One of them is
+<code>GET  /sites/example</code></p>
+<h2 id='url-parameters'>URL Parameters</h2>
+<p>The resource path in the URL specifies the item or collection to work with, the verb specifies the action, and the body if present specifies the content. So not all endpoints have URL parameters.</p>
+
+<p>Many endpoints have a “detail” parameter which can be “minimal”, “all” or other values specified in the endpoint documentation. Another use of URL parameters is to filter the output.</p>
+<h2 id='dates-and-times'>Dates and Times</h2>
+<p>Timestamp data gathered by GENI and EOS are always in UTC from the beginning. When an object has a timestamp field, no timezone is typically specified, because it is assumed to be UTC. </p>
+
+<p>Timestamps are usually stored with millisecond precision. When a timestamp is transmitted as a long integer (typical), it is always encoded as the number of milliseconds since the epoch, 1970-01-01T00:00:00Z.</p>
+
+<p>However, when interacting with external systems - such as handling tariff data or user-provided usage data - local time may be used. If possible, timestamps will be converted to UTC for storage and future use. For cases where this is not practical, fields and methods will be obviously named for local time, and time zone specifiers will be prominently included with the stored data.</p>
+<h1 id='authentication-api'>Authentication API</h1>
+<p>Authentication and basic self-service account functions are under <code>/auth</code> . This includes self-registration with email verification, changing one’s own password, and account recovery via email.</p>
+
+<p>This particular API only has methods related to identity. It does not use permissions, although some endpoints may require role = SUPERUSER. It interacts with sessions that are in RECOVERING and VERIFYING and EXPIRED status, while other APIs only work with ACTIVE sessions.    .</p>
+
+<p>Several auth endpoints are available to unauthenticated users. Because of this, error messages may be intentionally not useful, or methods may appear to work (e.g. return 200 / 204) even if the request was actually refused.</p>
+<h2 id='email-identity'>Email Identity</h2>
+<p>The user’s email address is their username. Users of the system must have a valid email address and must either verify the address, or have their account created by an administrator. If you don&#39;t have a GENI account you can get one here: <a href="https://geni1.geli.net/#/user/account/register">Geni account registration</a></p>
+<h2 id='session-token'>Session = Token</h2>
+<p>Upon authenticating via password, the client is given a timestamped, encrypted and cryptographically signed <em>token</em> that identifies them to the system for a period of time. The server can examine this token later and determine whether or not it was signed by GENI.</p>
+
+<p>The token contains the user ID, the issue time, and other flags which control the token’s expiration and possibly provide other session information to GENI.</p>
+
+<p>GENI does not keep track of each token after generating them; it trusts the timestamp and signature in the token itself. Altering or forging a token without knowing the secrets used by the server to encrypt and sign it should be impossible. If you figure out how to do it, please let us know.</p>
+
+<p>To determine whether or not to accept a token, the server examines its timestamp. If the token is too old, the session is EXPIRED and the client will need to re-authenticate. Expired tokens are treated exactly like not having a token at all, except at <strong>GET /auth/login</strong>.</p>
+<h2 id='xss-csrf-protection'>XSS / CSRF Protection</h2>
+<p>To prevent Cross Site Scripting (XSS) and Cross Site Request Forgery (CSRF) attacks, there are actually two tokens provided to the client.</p>
+
+<p>The sensitive session token itself is returned in an “HttpOnly” cookie. This mitigates some types of XSS vulnerabilities, because it prevents JavaScript in the browser from being able to see the value of the session token.</p>
+
+<p>A second token, called the “CSRF Token” (actually an anti-CSRF token), is simultaneously provided in a header, which must be handled by the client as described in the following section. The CSRF Token is a secondary SHA1 HMAC signature on the session token, using a different secret. For a primary session token to be accepted, the corresponding CSRF Token must also be provided in the request headers. </p>
+
+<p>Combined with HSTS, this strategy helps prevent CSRF attacks, since any script that is not running from a web app loaded from Geli servers should not be able to access the CSRF Token, and no script may directly access the HttpOnly cookie token.</p>
+<h2 id='csrf-token-issue-and-reissue'>CSRF Token Issue and Reissue</h2>
+<p>The <strong>POST /auth/login</strong> endpoint, as well as any other GENI API endpoint, will offer a CSRF token via the header “Set-Authorization” at the same time that a new token cookie is issued. The client must remember the CSRF token, and include it in a header &quot;Authorization&quot; on each subsequent request.</p>
+
+<p>To keep an active session alive, as the client makes calls to GENI API endpoints, its cookie and CSRF token will be renewed. This does not happen with every request, only when the token is a few minutes old. The client should discard its existing CSRF Token and use the new one.</p>
+<h2 id='registration-procedure'>Registration Procedure</h2>
+<ol>
+<li><strong>POST /auth/register</strong> (“Request GENI Account”) with a username / email address. If accepted, an email is sent with an account verification link, including a token in the URL. </li>
+<li>When user clicks link, <strong>GET /auth/verify</strong> (“Verify Email”) to confirm token and get username.  </li>
+<li>Visit <strong>GET /auth/myaccount/questions</strong> to retrieve a list of available security questions. (currently not required) </li>
+<li>After user fills out form, <strong>POST /auth/verify</strong> (“Activate Account”) with the user’s name, security questions and other account details. </li>
+<li>In case of failure (password too short, etc), display message to user and try again. </li>
+<li>On success, account is active. User is not logged in, but may now log in.</li>
+</ol>
+<h2 id='recovery-procedures'>Recovery Procedures</h2>
+<ol>
+<li><strong>POST /auth/recover</strong> (“Request Account Recovery”) with email address. If accepted1, an email is sent with an account recovery link, including a token in the URL. </li>
+<li>When user clicks link, <strong>GET /auth/recover/step1</strong> (“Start Account Recovery”) to confirm token and get security questions. </li>
+<li>Next, <strong>POST /auth/recover/step2</strong> (“Complete Account Recovery”) with answers to the security questions and new password. </li>
+<li>If successful, password is changed and user can attempt to log in again.</li>
+</ol>
+<h2 id='security-considerations'>Security Considerations</h2>
+<p>The GENI application servers transmit sensitive data, such as tokens and passwords, in plaintext over HTTP. Yet secure usage of the APIs requires that it be deployed in a secure environment, and accessed by secure clients.</p>
+
+<p>This means that it must be deployed on a secure network behind a proxy, since HTTPS support is not part of the GENI app server. Such features are best left to a high-performance native web server such as <em>nginx</em>. </p>
+<h2 id='get-login'>Get Login</h2><pre class="highlight shell tab-shell"><code>curl
+  https://geni1.geli.net/auth/login
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Account"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Default"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"SITE:view,detail,use,manage"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"*"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"ADMIN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"USER"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"SUPERUSER"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin@geli.net"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
+<p>Examine tokens in request headers. If valid and current, and CSRF token matches cookie, return detailed information about the session user. If it is valid but expired, or CSRF token does not match, return only the username.  </p>
+
+<p>No token is the same as token equals empty string, or token equals “deleted”.</p>
+<h3 id='http-request'>HTTP request</h3>
+<p><code>GET https://geni1.geli.net/auth/login</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<p>No URL Parameters </p>
+<h2 id='post-login'>Post Login</h2>
+<blockquote>
+<p>To login and get GENI Token, use this:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://geni1.geli.net/auth/login <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+  "@dto":"Account",
+  "password" : "password",
+  "username" : "user@geli.net"
+}'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Account"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Default"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"d72f8bbd-5c72-4b26-99b5-524f68c99995"</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"SITE:view,detail,use,manage"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"*"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"ADMIN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"USER"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"SUPERUSER"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin@geli.net"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Attempt to authenticate with a username and password. If successful, the response headers will contain a cookie and CSRF token as described in the Issue and Reissue section. </p>
+<h3 id='http-request-2'>HTTP request</h3>
+<p><code>POST https://geni1.geli.net/auth/login</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<p>No URL Parameters</p>
+<h3 id='request-body'>Request Body</h3>
+<p><code>{
+  &quot;@dto&quot;:&quot;Account&quot;, 
+  &quot;password&quot; : &quot;password&quot;,
+  &quot;username&quot; : &quot;user@geli.net&quot;
+}</code></p>
+
+<aside name="notice">
+Replace "password" and "username" with your GENI username and password. 
+</aside> 
+<h2 id='get-all-roles'>Get All Roles</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://geni1.geli.net/auth/roles <span class="se">\</span>
+  -H <span class="s1">'Authorization: Token token=\"GENITOKEN"'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"List"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Role"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEVICE"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Role"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USER"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Role"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ADMIN"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Role"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUPERUSER"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Returns a list of all global roles e.g. SUPERUSER, USER, DEVICE, ADMIN.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://geni1.geli.net/auth/roles</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<p>No URL Parameters</p>
+<h3 id='authorization'>Authorization</h3>
+<p>role: SUPERUSER </p>
+<h2 id='get-a-specific-role'>Get a Specific Role</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://geni1.geli.net/auth/roles/user <span class="se">\</span>
+  -H <span class="s1">'Authorization: Token token=\"GENITOKEN"'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Role"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USER"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Returns a single role, not including the members list.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://geni1.geli.net/auth/roles/{role}</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>role</td>
+<td>The name of the role to retrieve</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<p>No URL Parameters</p>
+<h3 id='authorization-2'>Authorization</h3>
+<p>role: SUPERUSER </p>
+<h2 id='get-members-in-a-role'>Get Members in a Role</h2><pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://geni1.geli.net/auth/roles/user/members <span class="se">\</span>
+  -H <span class="s1">'Authorization: Token token=\"GENITOKEN"'</span> <span class="se">\</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"List"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UserProfile"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin@geli.net"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UserProfile"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@geli.net"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UserProfile"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ann@geli.net"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<p>Returns a list of all members of the specified role.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://geni1.geli.net/auth/roles/{role}/members</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -389,38 +654,34 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>role</td>
+<td>The name of the role to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<p>No URL Parameters</p>
+<h3 id='authorization-3'>Authorization</h3>
+<p>role: SUPERUSER </p>
+<h2 id='add-a-member-to-a-role'>Add a Member to a Role</h2><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://geni1.geli.net/auth/roles/user/members <span class="se">\</span>
+  -H <span class="s1">'Authorization: Token token=\"GENITOKEN"'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "@dto": "UserProfile",
+    "email": "test@geli.net"
+}'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+    </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UserProfile"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@geli.net"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p>Add a member to a role.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST https://geni1.geli.net/auth/roles/{role}/members</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -428,14 +689,234 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>role</td>
+<td>The name of the role to retrieve</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<p>No URL Parameters</p>
+<h3 id='authorization-4'>Authorization</h3>
+<p>role: SUPERUSER </p>
+<h2 id='delete-a-member-from-a-role'>Delete a Member from a Role</h2><pre class="highlight shell tab-shell"><code>curl -X DELETE <span class="se">\</span>
+  https://geni1.geli.net/auth/roles/user/members/test@geli.net <span class="se">\</span>
+  -H <span class="s1">'Authorization: Token token=\"GENITOKEN"'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an empty response (HTTP 204):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>Remove a user from a role.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>DELETE https://geni1.geli.net/auth/roles/{role}/members/{email}</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>role</td>
+<td>The name of the role to retrieve</td>
+</tr>
+<tr>
+<td>email</td>
+<td>User&#39;s URL-encoded email address</td>
+</tr>
+</tbody></table>
+<h3 id='url-parameters-8'>URL Parameters</h3>
+<p>No URL Parameters</p>
+<h3 id='authorization-5'>Authorization</h3>
+<p>role: SUPERUSER </p>
+<h1 id='zone-http-api'>Zone HTTP API</h1>
+<p>The Zone HTTP API provides services for GENI user interface applications (site configuration, end user utility view, etc). </p>
 
-<p>The Kittn API uses the following error codes:</p>
+<p>It’s a mostly-RESTful API concerned with performing CRUD operations on GENI Zone domain objects. </p>
+
+<p>It also has RPC-style methods to generate straightforward telemetry and event history reports for resources, and to send commands directly to EOS modules and devices for modal control of applications and remote device fault clearing.</p>
+
+<p>The Zone HTTP API is distinct from the queue-over-websockets communication protocol between EOS and GENI, although they share some DTO types and conventions.</p>
+<h2 id='api-prefix'>API Prefix</h2>
+<blockquote>
+<p>Get name and version information for the API 
+<code>shell 
+curl \
+  https://geni1.geli.net/api/v1/ \
+  -H &#39;Authorization: Token token=\&quot;GENITOKEN&quot;&#39; \
+</code></p>
+
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AppEnvironment"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"software"</span><span class="p">:</span><span class="w"> </span><span class="s2">"release.38"</span><span class="w">
+    </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Current prefix: </p>
+
+<p><code>/api/v1</code></p>
+
+<aside name="notice">
+ This prefix does NOT apply to the authentication **/auth/** endpoints.
+ </aside> 
+<h1 id='site-management'>Site Management</h1><h2 id='get-all-sites'>Get All Sites</h2><pre class="highlight shell tab-shell"><code>curl <span class="se">\</span>
+  https://geni1.geli.net/api/v1/sites <span class="se">\</span>
+  -H <span class="s1">'Authorization: Token token=\"GENITOKEN"'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Site"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"siteCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amped1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amped - Panasonic"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"streetAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2001 Sanyo Ave"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Diego"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"stateOrProvinceCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92154"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"countryCodeA2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"centerLatitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">32.562986</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"centerLongitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-116.938555</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manualGeolocation"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timeZone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/Los_Angeles"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manualTimeZone"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fe29b575-9da5-473c-a9e8-ad742ac060a9"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"commissioned"</span><span class="p">:</span><span class="w"> </span><span class="mi">1519340459183</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1519696104562</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"metrics"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"NET_METER"</span><span class="p">:</span><span class="w"> </span><span class="mi">118434</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Retrieve a list of all sites the current user is allowed to access.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET https://geni1.geli.net/api/v1/sites</code></p>
+<h3 id='url-parameters-9'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter (?)</th>
+<th>Description</th>
+<th>Function (=)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>max</td>
+<td>maximum number of results</td>
+<td></td>
+</tr>
+<tr>
+<td>onlyDeleted</td>
+<td>returns a list of “deleted” sites</td>
+<td></td>
+</tr>
+<tr>
+<td>detail</td>
+<td>detail requested</td>
+<td>status, name, all</td>
+</tr>
+</tbody></table>
+<h3 id='function-descriptions'>Function Descriptions</h3>
+<table><thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>status only</td>
+</tr>
+<tr>
+<td>name</td>
+<td>status, name, location</td>
+</tr>
+<tr>
+<td>all</td>
+<td>status, name, location and available nodes/devices</td>
+</tr>
+</tbody></table>
+<h3 id='authorization-6'>Authorization</h3>
+<p>role: any authenticated account . role SUPERUSER is required to use option onlyDeleted=true</p>
+<h2 id='get-a-specific-site'>Get a Specific Site</h2><pre class="highlight shell tab-shell"><code>curl <span class="se">\</span>
+  https://geni1.geli.net/api/v1/sites/amped1 <span class="se">\</span>
+  -H <span class="s1">'Authorization: Token token=\"GENITOKEN"'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Site"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"siteCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amped1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amped - Panasonic"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"streetAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2001 Sanyo Ave"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Diego"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"stateOrProvinceCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92154"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"countryCodeA2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"centerLatitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">32.562986</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"centerLongitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-116.938555</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manualGeolocation"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timeZone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/Los_Angeles"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manualTimeZone"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fe29b575-9da5-473c-a9e8-ad742ac060a9"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"commissioned"</span><span class="p">:</span><span class="w"> </span><span class="mi">1519340459183</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1519696104562</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"metrics"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"NET_METER"</span><span class="p">:</span><span class="w"> </span><span class="mi">118434</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Retrieve a specific site by sitecode.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET https://geni1.geli.net/api/v1/sites/{site}</code></p>
+<h3 id='url-parameters-10'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter (?)</th>
+<th>Description</th>
+<th>Function (=)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>detail</td>
+<td>detail requested</td>
+<td>status, name, all</td>
+</tr>
+</tbody></table>
+<h3 id='function-descriptions-2'>Function Descriptions</h3>
+<table><thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>status only</td>
+</tr>
+<tr>
+<td>name</td>
+<td>status, name, location</td>
+</tr>
+<tr>
+<td>all</td>
+<td>status, name, location and available nodes/devices</td>
+</tr>
+</tbody></table>
+<h3 id='authorization-7'>Authorization</h3>
+<p>role: any authenticated account to view site details .</p>
+<h1 id='http-errors'>HTTP Errors</h1>
+<p>The GENI API uses the following HTTP error codes:</p>
 
 <table><thead>
 <tr>
@@ -444,50 +925,104 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
+<td>200</td>
+<td>Okay -- Request is valid.</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created -- Successful creation of an entity.</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content -- Requests that don&#39;t return any content when they succeed.</td>
+</tr>
+<tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Request is invalid.</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>Unauthorized -- User is not logged in or session is expired or your API key is not authenticated.</td>
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Forbidden -- You are not authorized to perform this request.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Not Found -- The specified resource could not be found.</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>Method Not Allowed -- You tried to access a resource with an invalid method.</td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>409</td>
+<td>Conflict - Object is not in the expected state (e.g. trying to activate an account that was already activated).</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>415</td>
+<td>Unsupported Media Type -- Content-Type header isn&#39;t acceptable.</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>498</td>
+<td>ArcGIS Token Expired/Invalid -- Returned by the <strong>GET /auth/login</strong> method only.</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td>Internal Server Error -- Framework failure of unhandled exception.</td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>502</td>
+<td>Bad Gateway -- Seen in the test/production environments if the app server is not responding to the proxy server.</td>
 </tr>
 </tbody></table>
+<h1 id='metric-description'>Metric Description</h1><pre class="highlight shell tab-shell"><code>curl <span class="se">\</span>
+  https://geni1.geli.net/api/v1/metrics <span class="se">\</span>
+  -H <span class="s1">'Authorization: Token token=\"GENITOKEN"'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@dto"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MetricsInfo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"metrics"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRUE_POWER_TOTAL"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WATTS"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1010</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRUE_POWER_A"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WATTS"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1020</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRUE_POWER_B"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WATTS"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1030</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRUE_POWER_C"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WATTS"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1100</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REACTIVE_POWER_TOTAL"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VAR"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...more</span><span class="w"> </span><span class="err">metrics...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Returns all metric IDs and their associated name </p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://geni1.geli.net/api/v1/metrics</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<p>No URL Parameters  </p>
+<h3 id='authorization'>Authorization</h3>
+<p>role: USER</p>
 
       </div>
       <div class="dark-box">
