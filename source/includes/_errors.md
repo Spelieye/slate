@@ -1,22 +1,20 @@
-# Errors
+# HTTP Errors
 
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-The Kittn API uses the following error codes:
+The GENI API uses the following HTTP error codes:
 
 
 Error Code | Meaning
 ---------- | -------
-400 | Bad Request -- Your request is invalid.
-401 | Unauthorized -- Your API key is wrong.
-403 | Forbidden -- The kitten requested is hidden for administrators only.
-404 | Not Found -- The specified kitten could not be found.
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method.
-406 | Not Acceptable -- You requested a format that isn't json.
-410 | Gone -- The kitten requested has been removed from our servers.
-418 | I'm a teapot.
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.
+200 | Okay -- Request is valid.
+201 | Created -- Successful creation of an entity.
+204 | No Content -- Requests that don't return any content when they succeed. 
+400 | Bad Request -- Request is invalid.
+401 | Unauthorized -- User is not logged in or session is expired or your API key is not authenticated. 
+403 | Forbidden -- You are not authorized to perform this request.
+404 | Not Found -- The specified resource could not be found.
+405 | Method Not Allowed -- You tried to access a resource with an invalid method.
+409 | Conflict - Object is not in the expected state (e.g. trying to activate an account that was already activated). 
+415 | Unsupported Media Type -- Content-Type header isn't acceptable. 
+498 | ArcGIS Token Expired/Invalid -- Returned by the **GET /auth/login** method only. 
+500 | Internal Server Error -- Framework failure of unhandled exception.
+502 | Bad Gateway -- Seen in the test/production environments if the app server is not responding to the proxy server.
